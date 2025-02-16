@@ -39,7 +39,7 @@ docker-compose up
 <img width="557" alt="image" src="https://github.com/user-attachments/assets/13412c3b-cd65-457e-b98f-78ed4a2b3e4b" />
 4. Usage of the endpoints can be viewd in `Endpoint usages` section
 <img width="1258" alt="image" src="https://github.com/user-attachments/assets/c1ce05cd-95de-4e19-9ec1-d4d217de1524" />
-5. Usage can also be viewed by calling `http://127.0.0.1:8000/usage/<endpoint>`
+5. Usage can also be viewed by calling `http://127.0.0.1:8000/usage/{endpoint}`
 <img width="564" alt="image" src="https://github.com/user-attachments/assets/16edf7b5-4698-472a-9afc-4f009d86fea0" />
 
 ## Features
