@@ -1,36 +1,69 @@
 # MockApi
 This project implements a API mocking server using Django, SQLite, and Docker.
 
-## Setup
+## Prerequisites
+1. Docker
+2. Docker Compose
+
+## Quickstart
 1. Clone the repo
 ```
 git clone https://github.com/katiyarhrithik/mockapi.git
 cd mockapi
 ```
-2. Install requirements
-```
-pip install -r requirements.txt
-```
-3. Run Migrations
-```
-python mange.py migrate
-```
-4. Create admin user
-```
-python manage.py createsuperuser --username admin --email admin@example.com
-```
-5. Make the `entrypoint.sh` file executable
+
+2. Make the `entrypoint.sh` file executable
 ```
 chmod +x entrypoint.sh
 ```
-6. Start the server using docker-compose
+
+3. Start the server using docker-compose
+```
+docker-compose build
+docker-compose up
+```
+
+4. Start using. Steps mentioned in `Usage` section.
+
+This setup will use the existing `db.sqlite3` file. Admin user is already created with these credentials - username: `admin`, password: `root`.
+
+## New Setup
+1. Clone the repo
+```
+git clone https://github.com/katiyarhrithik/mockapi.git
+cd mockapi
+```
+
+2. Delete existing `db.sqlite3` file. This file will be recreated when executing the next steps.
+
+3. Install requirements. 
+```
+pip install -r requirements.txt
+```
+
+4. Run Migrations
+```
+python mange.py migrate
+```
+
+5. Create admin user
+```
+python manage.py createsuperuser --username admin --email admin@example.com
+```
+
+6. Make the `entrypoint.sh` file executable
+```
+chmod +x entrypoint.sh
+```
+
+7. Start the server using docker-compose
 ```
 docker-compose build
 docker-compose up
 ```
 
 ## Usage
-1. Open Django Admin page. Go to `http://127.0.0.1:8000/admin/` and Log in with your credentials. <img width="487" alt="image" src="https://github.com/user-attachments/assets/ee6c9fac-4615-4e6c-8dcc-35883749e5c0" />
+1. Open Django Admin page. Go to `http://127.0.0.1:8000/admin/` and Log in with your credentials.(If using the existing `db.sqlite3` file, use these credentials - username: `admin`, password: `root`) <img width="487" alt="image" src="https://github.com/user-attachments/assets/ee6c9fac-4615-4e6c-8dcc-35883749e5c0" />
 <img width="1231" alt="image" src="https://github.com/user-attachments/assets/051dbbd5-6aa6-4f92-8e1a-2f46295eb186" />
 
 2. Create new Endpoints to mock in `Endpoints` section
